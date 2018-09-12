@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "bb1f77f5-1180-4eef-a7ce-ca663b9b5b32",
+		"name": "GSA collection 1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GSA Search",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "a29693d3-33ad-4b27-bd25-1767eda98e0c",
+						"type": "text/javascript",
+						"exec": [
+							"var ts = new Date().getTime();",
+							"pm.variables.get(\"timeStamp\");",
+							"pm.variables.set(\"timeStamp\", ts);",
+							"pm.environment.get(\"environment\");",
+							"pm.variables.get(\"searchKeyWord\");",
+							"pm.variables.get(\"currentLanguage\");                                                 ",
+							"pm.variables.get(\"outputFormate\");",
+							"pm.variables.get(\"startNumber\");",
+							"pm.variables.get(\"resultsFetch\");",
+							"pm.variables.get(\"ifn\");",
+							"pm.globals.get(\"variable_key\");"
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "464bc323-5fd7-4dfa-a7cc-73dbde303bfb",
+						"type": "text/javascript",
+						"exec": [
+							"var data = JSON.parse(responseBody);",
+							"tests[\"Error Message\"] = data.errorMessage === '';",
+							"tests[\"Content Value\"] = data.content != 'null';",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{environment}}/v3/index.cfm?fwreinit=is.gsa&event=search.renderSearch&callback=jQuery1124018741811470525982_1521148905604&interfaceName={{ifn}}&searchViewName=esri_new_explore&format={{outputFormate}}&q={{searchKeyWord}}&oe=utf8&filter=1&ie=utf8&lr={{currentLanguage}}&start={{startNumber}}&num={{resultsFetch}}&_={{timeStamp}}\n",
+					"protocol": "http",
+					"host": [
+						"{{environment}}"
+					],
+					"path": [
+						"v3",
+						"index.cfm"
+					],
+					"query": [
+						{
+							"key": "fwreinit",
+							"value": "is.gsa"
+						},
+						{
+							"key": "event",
+							"value": "search.renderSearch"
+						},
+						{
+							"key": "callback",
+							"value": "jQuery1124018741811470525982_1521148905604"
+						},
+						{
+							"key": "interfaceName",
+							"value": "{{ifn}}"
+						},
+						{
+							"key": "searchViewName",
+							"value": "esri_new_explore"
+						},
+						{
+							"key": "format",
+							"value": "{{outputFormate}}"
+						},
+						{
+							"key": "q",
+							"value": "{{searchKeyWord}}"
+						},
+						{
+							"key": "oe",
+							"value": "utf8"
+						},
+						{
+							"key": "filter",
+							"value": "1"
+						},
+						{
+							"key": "ie",
+							"value": "utf8"
+						},
+						{
+							"key": "lr",
+							"value": "{{currentLanguage}}"
+						},
+						{
+							"key": "start",
+							"value": "{{startNumber}}"
+						},
+						{
+							"key": "num",
+							"value": "{{resultsFetch}}"
+						},
+						{
+							"key": "_",
+							"value": "{{timeStamp}}\n"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
