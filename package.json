@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "project for API testing",
   "scripts": {
-  "SearchDev-API-Testing": "newman run GSA_collection1.postman_collection.json -d data-article.csv"
+  "SearchDev-API-Testing": "newman run ./GSA_collection1.postman_collection.json -d ./data-article.csv"
   },
   "author": "",
   "dependencies": {
