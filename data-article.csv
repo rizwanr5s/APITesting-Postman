@@ -1,8 +1,8 @@
 S.No,environment,searchKeyWord,ifn,currentLanguage,outputFormate,startNumber,resultsFetch
-1,baseurl,arcgis,esri_new_explore,en,json,0,10
-2,baseurl,arcgis,esri_new_explore,en,json,10,20
-3,baseurl,arcgis,esri_new_explore,en,json,20,30
-4,baseurl,arcgis,esri_new_explore,en,json,30,40
-5,baseurl,arcgis,esri_new_explore,en,json,40,50
-6,baseurl,arcgis,esri_new_explore,en,json,50,60
-7,baseurl,arcgis,esri_new_explore,en,json,0,60
+1,searchdev.esri.com,arcgis,esri_new_explore,en,json,0,10
+2,searchdev.esri.com,arcgis,esri_new_explore,en,json,10,20
+3,searchdev.esri.com,arcgis,esri_new_explore,en,json,20,30
+4,searchdev.esri.com,arcgis,esri_new_explore,en,json,30,40
+5,searchdev.esri.com,arcgis,esri_new_explore,en,json,40,50
+6,searchdev.esri.com,arcgis,esri_new_explore,en,json,50,60
+7,searchdev.esri.com,arcgis,esri_new_explore,en,json,0,60
