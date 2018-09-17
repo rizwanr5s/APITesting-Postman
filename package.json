@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "project for API testing",
   "scripts": {
-  "GSA--SearchNew": "newman run GSA_collection1.postman_collection.json -d data-article.csv -r cli,html --reporter-html-export API-TestingReports.html --reporter-html-template template-WithoutResponse.hbs"
-  ,"GSA--CreateViewNew": "newman run GSA_collection1.postman_collection.json -d data-article.csv -r cli,html --reporter-html-export API-CreateViewReports.html --reporter-html-template template-WithoutResponse.hbs"
+  "GSA--SearchNew": "newman run GSA_collection1.postman_collection.json -d data-article.csv -r cli,html --reporter-html-export ./Reports/API-TestingReports.html --reporter-html-template template-WithoutResponse.hbs"
+  ,"GSA--CreateViewNew": "newman run GSA_collection1.postman_collection.json -d data-article.csv -r cli,html --reporter-html-export ./Reports/API-CreateViewReports.html --reporter-html-template template-WithoutResponse.hbs"
   },
   "author": "",
   "dependencies": {
