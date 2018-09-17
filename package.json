@@ -4,6 +4,7 @@
   "description": "project for API testing",
   "scripts": {
   "SearchDev-API-Testing": "newman run GSA_collection1.postman_collection.json -d data-article.csv -r cli,html --reporter-html-export API-TestingReports.html --reporter-html-template template-WithoutResponse.hbs"
+  "CreateviewDev-API-Testing": "newman run GSA_collection1.postman_collection.json -d data-article.csv -r cli,html --reporter-html-export API-TestingReports.html --reporter-html-template template-WithoutResponse.hbs"
   },
   "author": "",
   "dependencies": {
